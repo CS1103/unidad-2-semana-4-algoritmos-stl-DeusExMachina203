@@ -113,11 +113,10 @@ void uva11340(){ //solo puede haber espacios entre las líneas, en caso contrari
         float fprice=0;
         std::string a=" ";
         for(int j = 0; j< lines; j++){
-            std::cout<< "linea: " << j<<std::endl;
             std::cin>> a;
             for(char k : a){
                 auto search = prices.find(k);
-                if (search != prices.end()){ fprice += search->second; std::cout<<fprice<<std::endl;}
+                if (search != prices.end()){ fprice += search->second;}
                 }
             }
         std::cout<< fprice/100<<std::endl;
